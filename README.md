@@ -26,6 +26,7 @@ A API foi desenvolvida em **Node.js** com o framework **Express**, utilizando um
     "mensagem": "Gostei da ideia do mural interativo!"
   }
 ]
+```
 
 ### 2. `POST /messages`
 
@@ -37,3 +38,4 @@ A API foi desenvolvida em **Node.js** com o framework **Express**, utilizando um
   "nome": "Seu Nome",
   "mensagem": "Sua mensagem aqui"
 }
+```
