@@ -1,0 +1,11 @@
+services:
+  api:
+    image: node:latest
+    container_name: node_api
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    entrypoint: sh init.sh
+    command: tail -f /dev/null

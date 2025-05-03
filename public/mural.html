@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mural de Mensagens</title>
+</head>
+<body>
+  <h2>Mural de Mensagens</h2>
+  <div id="mural"></div>
+
+  <script>
+    async function carregarMensagens() {
+      const res = await fetch('/api/mensagens');
+      const mensagens = await res.json();
+
+      document.getElementById('mural').innerHTML = mensagens
+        .map(m => `<p><strong>${m.nome}</strong>: ${m.mensagem}</p>`)
+        .join('');
+    }
+
+    setInterval(carregarMensagens, 2000);
+    carregarMensagens(); // primeira chamada imediata
+  </script>
+</body>
+</html>
